@@ -30,6 +30,16 @@ if (tabButtons.length) {
     activateTab(btn, { focus: false });
   });
 
+  // In-page anchor links (e.g. a "Most Recent" card pointing at #experience)
+  // change the hash without firing popstate — switch tabs on hashchange too.
+  window.addEventListener('hashchange', () => {
+    const btn = tabForHash();
+    if (btn) {
+      activateTab(btn, { focus: false });
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+  });
+
   tabButtons.forEach((btn, index) => {
     btn.addEventListener('click', () => activateTab(btn, { focus: false, updateHash: true }));
 
@@ -57,11 +67,6 @@ if (tabButtons.length) {
     });
   });
 }
-
-// --- Print / save as PDF ---
-document.getElementById('print-button').addEventListener('click', () => {
-  window.print();
-});
 
 // --- Dark mode toggle ---
 const themeToggle = document.getElementById('theme-toggle');
