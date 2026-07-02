@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Google Docs Clone — Ishaan Srivastava</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-top">
+        <div class="avatar">
+          <img src="avatar.jpg" alt="Photo of Ishaan Srivastava" width="96" height="96" />
+        </div>
+        <div class="header-text">
+          <h1>Ishaan Srivastava</h1>
+        </div>
+        <div class="header-actions">
+          <a class="cv-download" href="Ishaan-Srivastava-CV.pdf" download aria-label="Download CV as PDF" title="Download CV (PDF)">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="cv-label">Download CV</span>
+          </a>
+          <button id="print-button" class="icon-button" type="button" aria-label="Print or save as PDF" title="Print or save as PDF">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-2M6 14h12v7H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden>
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <a href="index.html#projects" class="back-link">← Back to Projects</a>
+
+      <div class="project-hero">
+        <h1>Local Google Docs Clone</h1>
+        <p class="caption">Next.js 16 · TypeScript · Convex · TipTap/ProseMirror · Tailwind · shadcn/ui</p>
+      </div>
+
+      <div class="project-section">
+        <h2>What I Built</h2>
+        <ul class="bullet-list">
+          <li>A fully working clone of Google Docs where <span class="highlight">multiple people can edit the same document simultaneously</span> and see each other's changes appear instantly, with live avatars showing who's currently in the document.</li>
+          <li>Designed two <span class="highlight">custom formatting features</span> — text size controls and indentation — that didn't exist out of the box in the tools used, requiring me to extend the editor's plugin system.</li>
+          <li>Made a deliberate trade-off when a recommended technical setting would have broken the undo button — chose the version that <span class="highlight">actually worked for users</span> over the "correct" configuration.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Design Decisions</h2>
+        <p>The undo-button trade-off was the most interesting problem: the standard Convex + TipTap integration pattern recommends a specific sync setting that, in practice, causes the undo history to reset whenever a remote change comes in. I tested both approaches, observed the UX difference, and kept the configuration that preserved undo — even though it's technically "non-standard."</p>
+        <p>This project was built and hosted entirely <span class="highlight">locally</span> — the goal was to test the build process and feature implementation, not to deploy a production service.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Thesis</h2>
+        <p>Wanted to create a real test of <span class="highlight">how far AI-assisted development can go</span> — and what types of prompts are needed to efficiently build, debug, and deploy a simple but non-trivial application like a collaborative document editor.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Next Steps</h2>
+        <p>Add <span class="highlight">live cursors</span> (showing each collaborator's position in the document in real time), comments, and proper user accounts. Also planning to test larger, more direct prompts to see if future builds can get the same result with less back-and-forth debugging.</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © 2026 Ishaan Srivastava ·
+        <span class="contact-email">
+          <a href="mailto:ishy.slr@gmail.com">ishy.slr@gmail.com</a>
+          <button type="button" class="copy-email-btn" data-email="ishy.slr@gmail.com" aria-label="Copy email address" title="Copy email address">
+            <svg class="icon-copy" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6" />
+              <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <svg class="icon-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden>
+              <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <span class="copy-feedback" role="status" aria-live="polite"></span>
+        </span>
+        · <a href="https://www.linkedin.com/in/ishaan-srivastava-78034918b/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/IshaanSrivastava1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </footer>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

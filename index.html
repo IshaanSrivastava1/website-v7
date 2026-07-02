@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ishaan Srivastava — Portfolio</title>
+  <meta name="description" content="Portfolio of Ishaan Srivastava, a Supply Chain Data Analyst at Aramark with a Mechanical Engineering background, building automation tools and AI-assisted side projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ishaan Srivastava — Portfolio" />
+  <meta property="og:description" content="Portfolio of Ishaan Srivastava, a Supply Chain Data Analyst at Aramark with a Mechanical Engineering background, building automation tools and AI-assisted side projects." />
+  <meta property="og:image" content="https://ishaansrivastava1.github.io/website-v7/avatar.jpg" />
+  <meta property="og:image:alt" content="Photo of Ishaan Srivastava" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ishaan Srivastava — Portfolio" />
+  <meta name="twitter:description" content="Portfolio of Ishaan Srivastava, a Supply Chain Data Analyst at Aramark with a Mechanical Engineering background, building automation tools and AI-assisted side projects." />
+  <meta name="twitter:image" content="https://ishaansrivastava1.github.io/website-v7/avatar.jpg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-top">
+        <div class="avatar">
+          <img src="avatar.jpg" alt="Photo of Ishaan Srivastava" width="96" height="96" />
+        </div>
+        <div class="header-text">
+          <h1>Ishaan Srivastava</h1>
+        </div>
+        <div class="header-actions">
+          <a
+            class="cv-download"
+            href="Ishaan-Srivastava-CV.pdf"
+            download
+            aria-label="Download CV as PDF"
+            title="Download CV (PDF)"
+          >
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="cv-label">Download CV</span>
+          </a>
+          <button
+            id="print-button"
+            class="icon-button"
+            type="button"
+            aria-label="Print or save as PDF"
+            title="Print or save as PDF"
+          >
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-2M6 14h12v7H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button
+            id="theme-toggle"
+            class="icon-button"
+            type="button"
+            aria-label="Switch to dark mode"
+            title="Switch to dark mode"
+          >
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden>
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="header-bio">
+        <p>
+          I've spent the past 4 years building skills in mechanical engineering. Now, I want to help
+          build <span class="highlight">data systems</span> that help people like you get things done.
+          I'm all about <span class="highlight">simplifying workflows</span>, improving communication,
+          and finding solutions that work.
+        </p>
+        <p>
+          I hope you take a few minutes to view some of my projects below, and always feel free to
+          connect with me on
+          <a href="https://www.linkedin.com/in/ishaan-srivastava-78034918b/" target="_blank" rel="noopener noreferrer">LinkedIn</a> :)
+        </p>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="about" role="tab" aria-selected="true">About</button>
+      <button class="tab-btn" data-tab="projects" role="tab" aria-selected="false">Projects</button>
+      <button class="tab-btn" data-tab="experience" role="tab" aria-selected="false">Experience</button>
+    </nav>
+
+    <main class="content">
+      <section id="about" class="tab-panel" role="tabpanel">
+        <h2>Most Recent</h2>
+        <div class="card-grid">
+          <article class="card">
+            <p class="caption">July 2026</p>
+            <h3>Commitment Tracking Initiative</h3>
+            <p>Took ownership of planning, stakeholder coordination, and analysis for phases 1–3 of Aramark's Commitment Tracking initiative — resulting in over <span class="highlight">$100K in enrichment</span> for the business.</p>
+          </article>
+          <article class="card">
+            <p class="caption">June 2026</p>
+            <h3>Prediction-Market Tracking Tool</h3>
+            <p>Built an automated tool that tracks Polymarket's live Gold-settlement odds daily, generating an <span class="highlight">interactive chart</span> and an emailed summary of day-over-day changes.</p>
+          </article>
+          <article class="card">
+            <p class="caption">July 2026</p>
+            <h3>Real-Time Equity Charting App</h3>
+            <p>Built a browser-based charting app with <span class="highlight">live streaming prices</span>, technical indicators, gap detection, and interactive trendline drawing — deployable and shareable via a single live URL.</p>
+          </article>
+        </div>
+
+        <h2>About Me</h2>
+        <p>
+          I'm a <span class="highlight">Supply Chain Data Analyst</span> at Aramark, currently on the RFP
+          Analytics team. I like asking "yes, and how?" at every opportunity — digging into the
+          ins-and-outs of a product, building real relationships with clients, and finding ways to fit
+          naturally into a team's culture.
+        </p>
+        <p>
+          My background is in <span class="highlight">Mechanical Engineering</span> (BASc, University of
+          Toronto), which shaped a strong problem-solving and detail-oriented mindset I now bring to data
+          and process work. Outside of my day job, I build small <span class="highlight">automation tools</span>
+          — from prediction-market trackers to a real-time collaborative document editor — to learn by
+          shipping something real.
+        </p>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <p class="skill-group-label">Data &amp; Analytics</p>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">DuckDB</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Excel</span>
+              <span class="tag">PowerQuery</span>
+              <span class="tag">Snowflake</span>
+              <span class="tag">UI Bakery</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-label">Supply Chain &amp; Procurement</p>
+            <div class="skill-tags">
+              <span class="tag">RFP</span>
+              <span class="tag">RFQ</span>
+              <span class="tag">COPs</span>
+              <span class="tag">Contract Changes</span>
+              <span class="tag">SAP/Ariba</span>
+              <span class="tag">MicroStrategy</span>
+              <span class="tag">CMS</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-label">Engineering</p>
+            <div class="skill-tags">
+              <span class="tag">ANSYS</span>
+              <span class="tag">AutoCAD</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="tab-panel" role="tabpanel" hidden>
+        <h2>Personal Projects</h2>
+        <div class="card-grid">
+          <a class="card" href="project-equity-charts.html">
+            <h3>Real-Time Equity Charting App</h3>
+            <p class="caption">Python · FastAPI · WebSockets · Alpaca API · TradingView Lightweight Charts · Render</p>
+            <p>A browser-based mini trading terminal: searchable tickers, <span class="highlight">live streaming prices</span>, candlestick charts with gap detection, EMA/SMA/Bollinger/RSI/MACD indicators, and interactive trendline drawing.</p>
+          </a>
+          <a class="card" href="project-gold-odds.html">
+            <h3>Automated Prediction-Market Tracking</h3>
+            <p class="caption">Python · REST APIs · Matplotlib · Plotly · SMTP · Cron · Bash</p>
+            <p>Built a tool that checks Polymarket's odds on June Gold prices daily, tracks how odds shift over time, and emails a summary highlighting the <span class="highlight">biggest changes</span> — plus an interactive, zoomable chart.</p>
+          </a>
+          <a class="card" href="project-mu-ema.html">
+            <h3>Automated Technical-Analysis Reporting Tool</h3>
+            <p class="caption">Python · Time-Series Analysis · Matplotlib · Plotly · REST APIs · SMTP · Cron</p>
+            <p>Pulls a year of $MU price history, calculates <span class="highlight">9/21/48-day EMAs</span>, flags crossovers, and emails a daily chart and summary after market close.</p>
+          </a>
+          <a class="card" href="project-google-docs.html">
+            <h3>Local Google Docs Clone</h3>
+            <p class="caption">Next.js 16 · TypeScript · Convex · TipTap/ProseMirror · Tailwind · shadcn/ui</p>
+            <p>A fully working, <span class="highlight">real-time collaborative</span> document editor — live cursors, avatars, and custom text-size/indentation controls — built to test how far AI-assisted development can go.</p>
+          </a>
+        </div>
+
+        <h2>Academic Projects</h2>
+        <div class="card-grid">
+          <a class="card" href="project-solar-pv.html">
+            <h3>4th-Year Capstone — Solar PV Panel Sourcing</h3>
+            <p class="caption">BOMs · RFIs · ANSYS Simulation · QA/QC</p>
+            <p>Developed BOMs and RFIs for solar thermal collectors and PV panels in San Vicente, Mexico, and optimized heat transfer via ANSYS simulation for a <span class="highlight">20% cost decrease</span>.</p>
+          </a>
+          <a class="card" href="project-product-design.html">
+            <h3>Product Design — MIE540 Design Project</h3>
+            <p class="caption">PFD · FMEA · Taguchi Methods · AutoCAD</p>
+            <p>Built a business case for a ping-pong launcher, including a <span class="highlight">Failure Mode Effect Analysis</span>, Taguchi L9 noise experiments, and a 3D-printed working prototype.</p>
+          </a>
+          <a class="card" href="project-lca.html">
+            <h3>Life Cycle Assessment — MIE315 Consulting Project</h3>
+            <p class="caption">ISO 14040/44 · Financial Feasibility · NPV Analysis</p>
+            <p>Conducted a full <span class="highlight">Life Cycle Assessment</span> comparing LED vs. CFL bulbs, paired with a financial feasibility analysis (NPV, payback period) and a professional technical report.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="experience" class="tab-panel" role="tabpanel" hidden>
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>BASc Mechanical Engineering <span class="caption">— University of Toronto, Sept 2019 – Apr 2025</span></h3>
+            <ul class="bullet-list">
+              <li>4th-Year GPA: <span class="highlight">3.38 / 4.00</span></li>
+              <li>Professional Experience Year &amp; Minor in Engineering Business</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Skills</h2>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <p class="skill-group-label">Data &amp; Analytics</p>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">DuckDB</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Excel</span>
+              <span class="tag">PowerQuery</span>
+              <span class="tag">Snowflake</span>
+              <span class="tag">UI Bakery</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-label">Supply Chain &amp; Procurement</p>
+            <div class="skill-tags">
+              <span class="tag">RFP</span>
+              <span class="tag">RFQ</span>
+              <span class="tag">COPs</span>
+              <span class="tag">Contract Changes</span>
+              <span class="tag">SAP/Ariba</span>
+              <span class="tag">MicroStrategy</span>
+              <span class="tag">CMS</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-label">Engineering</p>
+            <div class="skill-tags">
+              <span class="tag">ANSYS</span>
+              <span class="tag">AutoCAD</span>
+            </div>
+          </div>
+        </div>
+
+        <h2>Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Supply Chain Data Analyst — RFP Analytics Team <span class="caption">— Aramark Canada, Mississauga, ON · Sept 2025 – Present</span></h3>
+            <ul class="bullet-list">
+              <li>Pulled, cleaned, and analyzed large datasets (<span class="highlight">400k+ rows</span>) daily using Excel, SQL, and Python; managed and updated central databases in Snowflake and UI Bakery.</li>
+              <li>Helped improve average response time from <span class="highlight">5 days to 3 days</span> with our primary Healthcare partner through research, monthly update reports, and proactive communication of ad hoc product updates.</li>
+              <li>Reduced time to completion of two major yearly projects from <span class="highlight">1.5 months to 3 weeks</span> by organizing work into sections, clarifying requirements with management, and automating with Python + Excel.</li>
+              <li>Took ownership of the Commitment Tracking initiative — planning timelines, organizing stakeholder meetings, and conducting analysis for phases 1–3 — resulting in over <span class="highlight">$100K in enrichment</span> for the business.</li>
+              <li>Continuously collaborate with procurement, finance, legal, and other cross-functional teams to gather feedback and improve data needs.</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h3>Procurement &amp; Category Management Co-op — Construction Projects <span class="caption">— Toronto Transit Commission (TTC), Toronto, ON · May 2023 – Aug 2024</span></h3>
+            <ul class="bullet-list">
+              <li>Managed 10 post-award contracts for planning, design, construction, and administration of infrastructure projects totaling over <span class="highlight">$10M</span>.</li>
+              <li>Created, issued, and revised CCs, CDs, RFQs, and COPs using MicroStrategy, SAP/Ariba, and CMS software, maintaining a <span class="highlight">90% compliance rate</span>.</li>
+              <li>Coordinated with estimating, scheduling, and cost management teams to prepare 118 project estimates, reducing payments by an <span class="highlight">average of 20%</span>.</li>
+              <li>Prepared presentations for management and clients, proactively keeping stakeholders updated.</li>
+              <li>Built personal task-tracker spreadsheets to apply continuous improvement principles, tracking and resolving discrepancies incrementally.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Awards &amp; Achievements</h2>
+        <ul class="bullet-list">
+          <li>Bonuses for completing the Commitment Tracking and 2026 RFP Scoring projects at Aramark ahead of schedule.</li>
+          <li>Selected as <span class="highlight">1 of 20 people</span> for Aramark's AI Builders initiative.</li>
+          <li>UofT Lassonde Entrance Scholarship.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © 2026 Ishaan Srivastava ·
+        <span class="contact-email">
+          <a href="mailto:ishy.slr@gmail.com">ishy.slr@gmail.com</a>
+          <button
+            type="button"
+            class="copy-email-btn"
+            data-email="ishy.slr@gmail.com"
+            aria-label="Copy email address"
+            title="Copy email address"
+          >
+            <svg class="icon-copy" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6" />
+              <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <svg class="icon-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden>
+              <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <span class="copy-feedback" role="status" aria-live="polite"></span>
+        </span>
+        · <a href="https://www.linkedin.com/in/ishaan-srivastava-78034918b/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/IshaanSrivastava1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </footer>
+  </div>
+
+  <button
+    id="back-to-top"
+    class="back-to-top"
+    type="button"
+    aria-label="Back to top"
+    title="Back to top"
+  >
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

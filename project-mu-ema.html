@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automated Technical-Analysis Reporting Tool — Ishaan Srivastava</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-top">
+        <div class="avatar">
+          <img src="avatar.jpg" alt="Photo of Ishaan Srivastava" width="96" height="96" />
+        </div>
+        <div class="header-text">
+          <h1>Ishaan Srivastava</h1>
+        </div>
+        <div class="header-actions">
+          <a class="cv-download" href="Ishaan-Srivastava-CV.pdf" download aria-label="Download CV as PDF" title="Download CV (PDF)">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="cv-label">Download CV</span>
+          </a>
+          <button id="print-button" class="icon-button" type="button" aria-label="Print or save as PDF" title="Print or save as PDF">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-2M6 14h12v7H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden>
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <a href="index.html#projects" class="back-link">← Back to Projects</a>
+
+      <div class="project-hero">
+        <h1>Automated Technical-Analysis Reporting Tool</h1>
+        <p class="caption">Python · Time-Series Analysis · Matplotlib · Plotly · REST APIs · SMTP · Cron</p>
+        <a href="https://ishaansrivastava1.github.io/markets-dashboard/#mu" class="live-link" target="_blank" rel="noopener noreferrer">View live tracker →</a>
+      </div>
+
+      <div class="project-section">
+        <h2>What I Built</h2>
+        <ul class="bullet-list">
+          <li>Pulls a <span class="highlight">full year of $MU (Micron) stock price history</span> and calculates the 9, 21, and 48-day Exponential Moving Averages (EMAs).</li>
+          <li>Automatically updates the price history, rebuilds the chart, and <span class="highlight">emails it to me after market close every 24 hours</span> — so I get the update even when I don't have my laptop open.</li>
+          <li>Automatically <span class="highlight">flags EMA crossovers</span> — when short-term and long-term trends cross — and emails a daily chart with a summary of how today's price action differs from yesterday's.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Thesis</h2>
+        <p>Based on a theory from a YouTuber I follow who observed that $MU was tracking the 9 and 21-day EMAs closely, with strong support at the 48-day. I wanted to <span class="highlight">plot and test it myself</span> over several weeks rather than take someone else's word for it.</p>
+        <p>Findings matched: since May 2026, every time $MU retraces below the 9-day EMA but stays above the 21-day, it subsequently rallies — creating a consistent <span class="highlight">dip-buying signal</span>.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Next Steps</h2>
+        <p>Repeat the same analysis for the <span class="highlight">remaining stocks in my personal portfolio</span> to test whether the EMA pattern is unique to Micron (as a sector leader during a hot AI hardware cycle) or a more generalizable signal.</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © 2026 Ishaan Srivastava ·
+        <span class="contact-email">
+          <a href="mailto:ishy.slr@gmail.com">ishy.slr@gmail.com</a>
+          <button type="button" class="copy-email-btn" data-email="ishy.slr@gmail.com" aria-label="Copy email address" title="Copy email address">
+            <svg class="icon-copy" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6" />
+              <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <svg class="icon-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden>
+              <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <span class="copy-feedback" role="status" aria-live="polite"></span>
+        </span>
+        · <a href="https://www.linkedin.com/in/ishaan-srivastava-78034918b/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/IshaanSrivastava1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </footer>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

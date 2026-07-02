@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Cycle Assessment — MIE315 — Ishaan Srivastava</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-top">
+        <div class="avatar">
+          <img src="avatar.jpg" alt="Photo of Ishaan Srivastava" width="96" height="96" />
+        </div>
+        <div class="header-text">
+          <h1>Ishaan Srivastava</h1>
+        </div>
+        <div class="header-actions">
+          <a class="cv-download" href="Ishaan-Srivastava-CV.pdf" download aria-label="Download CV as PDF" title="Download CV (PDF)">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="cv-label">Download CV</span>
+          </a>
+          <button id="print-button" class="icon-button" type="button" aria-label="Print or save as PDF" title="Print or save as PDF">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-2M6 14h12v7H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden>
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <a href="index.html#projects" class="back-link">← Back to Projects</a>
+
+      <div class="project-hero">
+        <h1>Life Cycle Assessment — MIE315 Consulting Project</h1>
+        <p class="caption">ISO 14040/44 · Financial Feasibility · NPV Analysis · Jan 2023 – Apr 2023</p>
+      </div>
+
+      <div class="project-section">
+        <h2>What I Did</h2>
+        <ul class="bullet-list">
+          <li>Conducted a comprehensive <span class="highlight">Life Cycle Assessment (LCA)</span> using standardized ISO 14040/44 frameworks, evaluating the environmental impacts of LED vs. CFL light bulbs across all phases: sourcing, production, use, and disposal.</li>
+          <li>Performed a <span class="highlight">financial feasibility analysis</span> including capital and operational cost estimates, payback period, NPV, and sensitivity analysis to quantify the economic case alongside the environmental one.</li>
+          <li>Compiled and presented findings in a professional technical report, offering <span class="highlight">actionable design and implementation insights</span> in the style of a consulting deliverable.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Outcomes</h2>
+        <p>The project taught me to think about tradeoffs across a product's entire life — not just the use phase, which is where most people's intuition stops. Pairing the environmental LCA with a full financial model (NPV, sensitivity analysis) meant the recommendations were grounded in both sustainability <span class="highlight">and</span> economic reality, which is the lens I now bring to supply chain and procurement decisions.</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © 2026 Ishaan Srivastava ·
+        <span class="contact-email">
+          <a href="mailto:ishy.slr@gmail.com">ishy.slr@gmail.com</a>
+          <button type="button" class="copy-email-btn" data-email="ishy.slr@gmail.com" aria-label="Copy email address" title="Copy email address">
+            <svg class="icon-copy" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6" />
+              <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <svg class="icon-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden>
+              <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <span class="copy-feedback" role="status" aria-live="polite"></span>
+        </span>
+        · <a href="https://www.linkedin.com/in/ishaan-srivastava-78034918b/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/IshaanSrivastava1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </footer>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
