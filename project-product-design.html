@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Design — MIE540 — Ishaan Srivastava</title>
+  <title>Catapong — Ishaan Srivastava</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="stylesheet" href="styles.css" />
@@ -42,23 +42,136 @@
       <a href="index.html#projects" class="back-link">← Back to Projects</a>
 
       <div class="project-hero">
-        <h1>Product Design — MIE540 Design Project</h1>
-        <p class="caption">PFD · FMEA · Taguchi Methods · AutoCAD · 3D Printing · Jan 2025 – Apr 2025</p>
+        <h1>Catapong</h1>
+        <p class="project-subtitle">Designing and Optimizing a Ping Pong Ball Launcher</p>
+        <p class="caption">MIE540: Product Design · University of Toronto · Feb - Apr 2025</p>
+        <p class="caption">Product Economics · Financial Analysis (NPV) · Taguchi DOE · FMEA · Tolerance Analysis · 3D Printing</p>
       </div>
 
       <div class="project-section">
-        <h2>What I Did</h2>
+        <h2>What We Built</h2>
+        <p>Catapong is a compact, low cost toy that launches ping pong balls up to 20 feet with an adjustable, repeatable throw. Working in a five-person team under the fictional company "Playtopia" for MIE540: Product Design at the University of Toronto, we took the product from market opportunity all the way to a tested, optimized physical prototype across two project phases. Part A built the business case: benchmarking, concept generation, product economics, and risk analysis. Part B built and tested a working rig, using a designed experiment to tune the launcher for accuracy and then validating its performance limits. <strong>I led the product economics and financial analysis in Part A, and the failure mode analysis and latitude/tolerance studies in Part B.</strong> Completed across February to April 2025.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Thesis</h2>
+        <p>The market had a clear gap: existing ping pong launchers were either cheap and inaccurate or accurate and expensive. Catapong set out to prove that a simple centrifugal catapult, rigorously optimized through a designed experiment, could deliver high accuracy at low cost, and that the design could be made robust enough to survive real-world variation and manufacturing tolerances.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Design Decisions</h2>
         <ul class="bullet-list">
-          <li>Created a comprehensive business case for a sample ping-pong launcher, including a <span class="highlight">Product Functional Decomposition (PFD) diagram</span> and Failure Mode Effect Analysis (FMEA) table to identify and prioritize critical design parameters.</li>
-          <li>Used <span class="highlight">Taguchi experiments with an L9 orthogonal matrix</span> to systematically determine how sensitive the product was to noise factors — a structured way to optimize design robustness with minimal test runs.</li>
-          <li>Developed a <span class="highlight">supplier scorecard system</span> to evaluate vendors based on cost, quality, and delivery metrics.</li>
-          <li>Created a functioning 3D-printed prototype using AutoCAD to model the parts before fabrication.</li>
+          <li><strong>Chose a centrifugal catapult over four other concepts.</strong> The team generated five launch mechanisms (contra-rotating wheels, mortar, crossbow, auto-feed, and centrifugal catapult) and scored them in a Pugh matrix. The catapult won with the top weighted score of 3.80 because it was cheap to produce and simple to assemble without sacrificing much accuracy, which directly targeted the market gap.</li>
+          <li><strong>Anchored the concept in a benchmarked market opportunity.</strong> Competitive benchmarking of five existing products mapped a clear opening for a low cost, high accuracy launcher, giving the whole project a defensible reason to exist rather than a guess.</li>
+          <li><strong>Used a Taguchi L9 experiment instead of a full factorial.</strong> With four control factors at three levels each, a full factorial was too resource-heavy. The Taguchi approach cut testing to nine runs and, more importantly, optimized for robustness against noise (like ping pong ball weight variation), which mattered more than mapping every interaction.</li>
+          <li><strong>Designed the product to store inside its own base.</strong> All components dismount and pack into the base for portability, adding a "wow" factor and making the product stackable and sellable as a set.</li>
         </ul>
       </div>
 
       <div class="project-section">
+        <h2>My Work: Product Economics &amp; Financial Analysis</h2>
+        <p>I built the business case that determined whether Catapong was worth producing, from pricing through risk.</p>
+        <ul class="bullet-list">
+          <li><strong>Found the optimal price point.</strong> Using a volume-versus-price demand curve against fixed development and production salaries, marketing costs, and bill-of-materials (BOM) costs, I identified the price that maximized quarterly profit: a selling price of <span class="highlight">$30.99 per unit</span> against a $14.98 BOM cost.</li>
+          <li><strong>Benchmarked the discount rate to a real company.</strong> I used Mattel's weighted average cost of capital (WACC) of 7.6% as the discount rate, since Playtopia targets a similar market, giving the model a credible hurdle for evaluating returns.</li>
+          <li><strong>Ran a full risk and sensitivity analysis.</strong> I stress-tested the model against higher cost of capital, lower sales volume, and rising material costs, and catalogued market, production, financial, and regulatory risks (including toy safety standards like ASTM F963 and CPSIA).</li>
+        </ul>
+        <p><strong>The result:</strong> Catapong showed a positive net present value (NPV) of <span class="highlight">$28,570,179.59</span> and recovered its investment in just <span class="highlight">6 quarters (1.5 years)</span>. The NPV stayed positive across every sensitivity scenario, only turning negative under extreme, historically unobserved conditions such as interest rates above 30%, marking the product as financially viable with manageable risk.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>My Work: Failure Mode &amp; Effect Analysis</h2>
+        <p>I identified how Catapong could fail and prioritized fixes using a Failure Mode and Effect Analysis (FMEA), scoring each failure on severity, occurrence, and detection to produce a Risk Priority Number (RPN).</p>
+        <ul class="bullet-list">
+          <li><strong>Prioritized the highest-risk failures.</strong> Across five failure modes (spring failure, stopper fracture, incorrect launch distance, arm out of specification, and arm fracture), incorrect launch distance carried the highest initial risk at an RPN of 288, driven by how hard it was to detect before use.</li>
+          <li><strong>Tied each failure to a concrete design action.</strong> For the highest risk item I recommended a locking mechanism that clicks into set distances, giving the user clear feedback before launch. Other actions included stronger spring selection and switching the arm to carbon fiber.</li>
+        </ul>
+        <p><strong>The result:</strong> the recommended actions drove meaningful risk reduction across the board. Incorrect launch distance dropped from an <span class="highlight">RPN of 288 to 72</span>, and spring failure fell from <span class="highlight">128 to 48</span>, turning a list of vulnerabilities into a concrete, prioritized improvement plan.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>My Work: Latitude &amp; Tolerance Analysis</h2>
+        <p>After the experiment identified arm length as the most influential control factor, I ran the studies that defined its safe operating window and manufacturing limits.</p>
+        <ul class="bullet-list">
+          <li><strong>Ran a latitude study to find the working range.</strong> I 3D printed arms at 10mm intervals and tested each for accuracy, consistency, and structural integrity. This established that arm length must stay <span class="highlight">between 180mm and 190mm</span>: below 180mm the arm was too weak to reach distance, and above 190mm it flexed and lost accuracy.</li>
+          <li><strong>Compared two tolerance methods.</strong> I calculated manufacturing tolerances using both Worst-on-Worst (WOW) and Root Sum Square (RSS) approaches, yielding bilateral tolerances of 0.4mm and 0.28mm respectively around the 180mm nominal length.</li>
+          <li><strong>Flagged a refinement for future production.</strong> Because both tolerance ranges dipped slightly below the optimal window at their lower bound, I recommended raising the nominal arm length by 5mm to bring the full tolerance band inside the optimal range.</li>
+        </ul>
+        <p><strong>The result:</strong> a defined 10mm total latitude for the critical dimension and a clear manufacturing tolerance target, with any arm produced outside the range flagged for recycling. This translated a single optimization result into an actionable production specification.</p>
+      </div>
+
+      <div class="project-section">
         <h2>Outcomes</h2>
-        <p>This project bridged engineering and business: the Taguchi approach gave a statistically grounded way to select design parameters, while the supplier scorecard introduced real procurement thinking into the design phase. The combination mirrors how industrial product development teams operate — <span class="highlight">design and sourcing working together from the start</span>.</p>
+        <p>As an academic project, Catapong moved from concept to a validated, optimized prototype recommended for market release.</p>
+        <p>The Taguchi experiment identified arm length as the dominant driver of accuracy and set the optimal configuration (50mm stopper placement, 180mm arm length, 40-degree base angle, and 50% arm infill). A verification run confirmed the model predicted the mean launch accuracy well, cutting the average miss distance from <span class="highlight">roughly 165mm off-target at baseline to about 5.5mm</span> at the optimal setting. On the business side, my financial analysis showed a positive NPV of $28,570,179.59 and a 1.5-year payback, and my FMEA and tolerance work defined the risk controls and manufacturing limits needed to build it reliably.</p>
+        <p><strong>Limitations worth noting:</strong> the signal-to-noise prediction carried roughly 60% error in the verification run, attributed to experimental noise, base movement, and pullback variation between the two test balls. The team flagged data refinement and latitude studies on the remaining control factors (such as base angle) as next steps.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Chart &amp; Graphic Placement</h2>
+
+        <div class="figure-note">
+          <h3>1. Rendered product model (Figure 1, Part A/B)</h3>
+          <p><strong>Section:</strong> What We Built</p>
+          <p><strong>Reinforces:</strong> The finished product concept, giving the reader an immediate, tangible sense of what Catapong is.</p>
+          <p><strong>Caption:</strong> "The final Catapong concept: a compact catapult launcher that stores inside its own base."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>2. Positioning chart (Figure 2, Part A)</h3>
+          <p><strong>Section:</strong> Design Decisions, beside the benchmarked-opportunity point</p>
+          <p><strong>Reinforces:</strong> The market gap the product targets, visually locating the low-cost, high-accuracy opening.</p>
+          <p><strong>Caption:</strong> "Competitive benchmarking mapped a clear opening for a low cost, high accuracy launcher."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>3. Pugh matrix (Figure 4, Part A)</h3>
+          <p><strong>Section:</strong> Design Decisions, beside the concept-selection point</p>
+          <p><strong>Reinforces:</strong> The structured, weighted decision that selected the centrifugal catapult over four alternatives.</p>
+          <p><strong>Caption:</strong> "Weighted concept scoring: the centrifugal catapult led all five candidates at 3.80."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>4. Optimal pricing / NPV tables (Figures C.1 and C.3, Part A)</h3>
+          <p><strong>Section:</strong> My Work: Product Economics &amp; Financial Analysis</p>
+          <p><strong>Reinforces:</strong> The core financial finding, showing the profit-maximizing price point and the positive NPV.</p>
+          <p><strong>Caption:</strong> "Demand-curve pricing and cash flow analysis pinpointing the $30.99 optimal price and positive NPV."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>5. Sensitivity analysis table (Figure C.4, Part A)</h3>
+          <p><strong>Section:</strong> My Work: Product Economics &amp; Financial Analysis (or Outcomes)</p>
+          <p><strong>Reinforces:</strong> The robustness of the business case, showing NPV stays positive under cost and demand stress.</p>
+          <p><strong>Caption:</strong> "NPV remains positive across higher costs and lower sales, confirming a resilient business case."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>6. FMEA table (Table 1, Part B)</h3>
+          <p><strong>Section:</strong> My Work: Failure Mode &amp; Effect Analysis</p>
+          <p><strong>Reinforces:</strong> The before-and-after risk scores, making the drop in Risk Priority Numbers immediately visible.</p>
+          <p><strong>Caption:</strong> "Prioritized failure modes with recommended actions and their resulting risk reduction."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>7. Main effects plots (Figures 11 and 12, Part B)</h3>
+          <p><strong>Section:</strong> Outcomes, beside the arm-length finding</p>
+          <p><strong>Reinforces:</strong> The experimental evidence that arm length dominates accuracy, anchoring the optimization result.</p>
+          <p><strong>Caption:</strong> "Main effects plots identifying arm length as the strongest driver of launch accuracy."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>8. Latitude testing table (Table 5, Part B)</h3>
+          <p><strong>Section:</strong> My Work: Latitude &amp; Tolerance Analysis</p>
+          <p><strong>Reinforces:</strong> The pass/fail boundary that defines the arm's safe operating window.</p>
+          <p><strong>Caption:</strong> "Latitude testing pinpointing the 180 to 190mm working range for the launcher arm."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>9. Arm engineering drawing (Figure 15, Part B)</h3>
+          <p><strong>Section:</strong> My Work: Latitude &amp; Tolerance Analysis (or What We Built)</p>
+          <p><strong>Reinforces:</strong> The engineering rigor behind the final part, connecting the analysis to a real manufacturable component.</p>
+          <p><strong>Caption:</strong> "Dimensioned engineering drawing of the optimized launcher arm."</p>
+        </div>
       </div>
     </main>
 
