@@ -43,21 +43,99 @@
 
       <div class="project-hero">
         <h1>4th-Year Capstone — Solar PV Panel Sourcing</h1>
-        <p class="caption">BOMs · RFIs · ANSYS Simulation · QA/QC · IEC Standards · Sept 2024 – Apr 2025</p>
+        <p class="project-subtitle">Solar Water Heating for the San Vicente Orphanage</p>
+        <p class="caption">University of Toronto · APS490 Multidisciplinary Capstone · Two semesters · Client: Reto Juvenil Internacional · Implemented on site June 2025</p>
+        <p class="caption">Engineering Design · Python Thermal Modeling · Economic Analysis · CAD &amp; P&amp;ID · Prototyping · Vendor Sourcing</p>
       </div>
 
       <div class="project-section">
-        <h2>What I Did</h2>
+        <h2>What We Built</h2>
+        <p>A solar-powered hot water system for San Vicente Center, an orphanage for disabled children in Ajusco, Mexico (high-altitude, cold, and facing a severe water-cost crisis). Built as a four-person capstone project at the University of Toronto (APS490 Multidisciplinary Capstone, Faculty of Applied Science and Engineering) over two semesters for the nonprofit client Reto Juvenil Internacional, and implemented on site in June 2025.</p>
+        <p>The orphanage was spending roughly $500 USD/month on propane just to heat shower water, and could only afford to run the heater about three weeks out of four. We designed a system that heats <span class="highlight">300L of water per day</span> to a usable shower temperature using an evacuated tube solar collector, backed by an on-demand propane heater for cloudy days and cold mornings. A companion grid-tied solar panel system offsets the electricity cost of the system's pumps, and the building's lighting was re-planned with efficient LEDs to cut power bills further.</p>
+        <p>I owned a large share of the technical core of this project: I wrote the engineering design process (system sizing, applying the thermal model, and the final selected design), the economic analysis, the prototype and design feasibility work, and the future recommendations. In practice that meant carrying the project from "what should we build and why" through "does it actually work" to "here's what it costs and what to do next." The final deliverable was a complete, implementation-ready package: sizing backed by a custom thermal simulation, a validated physical prototype, engineering drawings (CAD and P&amp;ID), vendor quotes sourced from suppliers inside Mexico, and the full cost-and-savings case.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Thesis</h2>
+        <p>Low-cost, renewable hot water is not a luxury for under-resourced communities, it's a lever for survival. By replacing an unaffordable propane habit with a right-sized solar system, we could free up an orphanage's scarce budget for the water, food, and care its children actually need, while proving the design would work through the region's cold winters, not just on paper.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Design Decisions</h2>
         <ul class="bullet-list">
-          <li>Developed <span class="highlight">Bills of Materials (BOMs) and Requests for Information (RFIs)</span> to support the procurement and construction of solar thermal collectors and PV panels in San Vicente, Mexico.</li>
-          <li>Implemented QA/QC procedures — including validating supplier certifications through recognized third parties — resulting in <span class="highlight">product compliance with IEC standards</span>.</li>
-          <li>Created a functioning prototype and optimized heat transfer through the system using <span class="highlight">ANSYS simulation</span>, resulting in a 20% cost decrease.</li>
+          <li><strong>Evacuated tube collector over a flat-plate collector.</strong> The sizing analysis I ran showed evacuated tubes needed far less roof area to hit the target temperature (<span class="highlight">4.75m² vs 6.25m² in winter</span>). The tradeoff served two constraints at once: limited roof space and year-round reliability, since better insulation meant less efficiency lost as water heated up.</li>
+          <li><strong>Pairing solar with an on-demand propane backup instead of going fully solar.</strong> Solar alone couldn't guarantee 40°C on low-sunlight winter mornings. Rather than oversize (and overspend on) the collector for a worst-case that happens ~40% of the time, I sized the collector for typical days and let a cheaper on-demand heater cover the gap. This kept capital cost down while still meeting the "reliable every day" requirement, a tradeoff I could quantify directly through the economic analysis.</li>
+          <li><strong>Building a custom Python thermal model.</strong> Solar irradiance and heat loss change continuously through the day, so a static calculation wouldn't cut it. A discrete-time model (10-second steps over an 8-hour window) let me test collector type, area, pump flow rate, and season before spending a dollar, turning sizing into an evidence-based decision instead of a guess.</li>
+          <li><strong>Prototyping to validate the model, not the product.</strong> I made a deliberate call: we couldn't afford to build real evacuated tubes on a $1,000 budget, so I designed a simpler 1/20th-scale flat-plate collector instead. The goal wasn't to demo the final system, it was to prove the model was trustworthy. To actually get it built, I hosted the team at my house and we constructed and tested the prototype in my backyard, over multiple test days and two rounds of leak fixes. Once the prototype data matched the model, we could trust its predictions for the full-size design.</li>
+          <li><strong>Solar panels for the pumps, not the lights.</strong> Powering the lights with solar would have required expensive battery storage (lights run at night), blowing past the $10,000 budget. Pointing the panels at the daytime pump loads instead meant they paid for themselves without batteries, a conclusion that came straight out of running the numbers.</li>
+          <li><strong>Sourcing quotes only from suppliers inside Mexico.</strong> A hard constraint required materials procurable within a 20km radius, so every quote had to be installable and serviceable locally, turnkey, permits included. This kept the design genuinely implementable rather than theoretically ideal.</li>
+          <li><strong>Scoping out the water-shortage problem.</strong> The team explicitly chose not to tackle the orphanage's underlying water-scarcity issue, because the government controls the regional supply and residents had faced trouble for rerouting it. Naming what was out of scope kept the project focused on what it could actually change: operating cost.</li>
         </ul>
       </div>
 
       <div class="project-section">
         <h2>Outcomes</h2>
-        <p>The project combined real-world procurement practice (BOMs, RFIs, supplier vetting) with hands-on engineering simulation. The QA/QC process and ANSYS optimization work directly mirrored what a sourcing or procurement team would do on a live infrastructure project.</p>
+        <p><strong>The system was approved and implemented on site in June 2025.</strong> Every quote met all design requirements and cleared client and University of Toronto approval, moving the project from paper to a working installation at the orphanage.</p>
+        <p>Through the economic analysis I led, the final design came in at a total capital cost of <span class="highlight">$5,873.07 USD</span>, well under the client's $10,000 ceiling (solar collector + on-demand system: $2,785; solar panel system: $3,088.07). The system was projected to cut the orphanage's water-heating and electricity operating costs by roughly <span class="highlight">$322 to $394 USD per month</span>, a dramatic reduction against the ~$500/month propane baseline, and the budget it frees up goes straight back into water, care, and daily operations.</p>
+        <p>The Python model was validated against the physical prototype I designed and built: on clear test days, actual water temperatures tracked the model's predictions closely, giving the team confidence in the sizing. Testing also surfaced a real design insight I carried into the recommendations, that continuous pump circulation on low-sun days causes heat loss, leading to a recommendation to add a temperature-triggered valve to the final build.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Honest Limitations &amp; Future Work</h2>
+        <p>In peak winter, the solar collector alone only reaches ~32°C, so the on-demand heater carries the rest of the load, by design, but it's the system's weak point. Prototype testing was run in Toronto in March under sub-optimal cold, windy conditions rather than in Ajusco, and known sources of error (an uninsulated prototype tank, ~2°C of pump heat, a less-efficient flat-plate stand-in) were documented rather than hidden. Future work I recommended: enlarging the collector as funding allows, adding solar tracking, and extending the system to other buildings on site.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Suggested Chart &amp; Graphic Placement</h2>
+
+        <div class="figure-note">
+          <h3>Overall system CAD model (Fig. 9–11)</h3>
+          <p><strong>Section:</strong> What We Built</p>
+          <p><strong>Reinforces:</strong> Makes the abstract "solar water system" instantly concrete, the shot that tells a non-technical visitor what the thing is.</p>
+          <p><strong>Caption:</strong> "The system as built: rooftop evacuated tube collectors and insulated tank, with an on-demand propane heater as backup."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>Bird's-eye view, new elements in red (Fig. 12)</h3>
+          <p><strong>Section:</strong> What We Built</p>
+          <p><strong>Reinforces:</strong> Shows how the new design integrates into the existing infrastructure rather than replacing it, one of the key constraints.</p>
+          <p><strong>Caption:</strong> "New components (in red) layered onto the orphanage's existing setup, no major infrastructure changes required."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>Seasonal collector-area comparison (Table 6)</h3>
+          <p><strong>Section:</strong> Design Decisions</p>
+          <p><strong>Reinforces:</strong> The clearest single piece of evidence behind choosing evacuated tubes, less area needed, especially in winter. This is your sizing analysis.</p>
+          <p><strong>Caption:</strong> "Why evacuated tubes: they hit the target temperature with far less roof area, most decisively in winter."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>Seasonal simulation results (Fig. 20–22)</h3>
+          <p><strong>Section:</strong> Design Decisions / Outcomes</p>
+          <p><strong>Reinforces:</strong> Shows the model doing its job, proving the collector meets the target in three seasons and quantifying the winter gap the backup heater fills.</p>
+          <p><strong>Caption:</strong> "Simulated performance across seasons: the collector clears 40°C spring through fall and reaches ~32°C in winter, where the backup heater takes over."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>Prototype validation chart, sunny day (Fig. 31)</h3>
+          <p><strong>Section:</strong> Outcomes</p>
+          <p><strong>Reinforces:</strong> Actual vs. predicted temperature tracking closely, the visual that earns trust in the whole method. Your strongest single proof point.</p>
+          <p><strong>Caption:</strong> "Model vs. reality: on a clear test day, measured tank temperature tracked the simulation closely, validating our sizing."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>Operating-cost savings table (Sec. 8.2.1)</h3>
+          <p><strong>Section:</strong> Outcomes</p>
+          <p><strong>Reinforces:</strong> The headline number from the economic analysis you owned, the ~$320–$390/month savings that make the project matter.</p>
+          <p><strong>Caption:</strong> "Projected monthly savings versus the propane baseline, the impact that frees up budget for water and care."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>Completed prototype photo (Fig. 29)</h3>
+          <p><strong>Section:</strong> Design Decisions / Outcomes</p>
+          <p><strong>Reinforces:</strong> Tangible, hands-on, we-actually-built-this credibility, and it's the prototype you designed and built in your backyard.</p>
+          <p><strong>Caption:</strong> "The scale prototype I designed and built to pressure-test the thermal model before committing to a full-size design."</p>
+        </div>
       </div>
     </main>
 
