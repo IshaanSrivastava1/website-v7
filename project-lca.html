@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Life Cycle Assessment — MIE315 — Ishaan Srivastava</title>
+  <title>LED vs. Fluorescent Lighting — Ishaan Srivastava</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="stylesheet" href="styles.css" />
@@ -42,22 +42,97 @@
       <a href="index.html#projects" class="back-link">← Back to Projects</a>
 
       <div class="project-hero">
-        <h1>Life Cycle Assessment — MIE315 Consulting Project</h1>
-        <p class="caption">ISO 14040/44 · Financial Feasibility · NPV Analysis · Jan 2023 – Apr 2023</p>
+        <h1>LED vs. Fluorescent Lighting</h1>
+        <p class="project-subtitle">A Life Cycle Consultant's Report for Bombardier</p>
+        <p class="caption">MIE315: Design for the Environment · University of Toronto · April 2023</p>
+        <p class="caption">Life Cycle Assessment · OpenLCA · TRACI 2.1 · GWP · Financial Analysis · Sensitivity Analysis</p>
       </div>
 
       <div class="project-section">
-        <h2>What I Did</h2>
+        <h2>What We Built</h2>
+        <p>A consultant's report evaluating whether Bombardier should replace the fluorescent lighting at its Saint-Laurent manufacturing facility (a 1,200,000 sq. ft. site with 4,367 overhead fixtures) with LED (Light Emitting Diode) alternatives. Working in a four-person team for MIE315: Design for the Environment at the University of Toronto, we treated Bombardier as a real client and delivered a recommendation backed by four analyses: financial, environmental, societal, and uncertainty. <strong>I led the Financial Analysis and the Process-Based LCA (Life Cycle Assessment), the two quantitative pillars behind the final verdict: switch to LEDs.</strong> Completed April 2023.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Thesis</h2>
+        <p>A lighting choice that looks expensive up front can be the smarter decision once you account for its full life cycle. By comparing LEDs against LFLs (Linear Fluorescent Lights) across cost, carbon, and social impact rather than sticker price alone, the report makes the case that LEDs are the better investment for Bombardier on every axis that matters.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Design Decisions</h2>
         <ul class="bullet-list">
-          <li>Conducted a comprehensive <span class="highlight">Life Cycle Assessment (LCA)</span> using standardized ISO 14040/44 frameworks, evaluating the environmental impacts of LED vs. CFL light bulbs across all phases: sourcing, production, use, and disposal.</li>
-          <li>Performed a <span class="highlight">financial feasibility analysis</span> including capital and operational cost estimates, payback period, NPV, and sensitivity analysis to quantify the economic case alongside the environmental one.</li>
-          <li>Compiled and presented findings in a professional technical report, offering <span class="highlight">actionable design and implementation insights</span> in the style of a consulting deliverable.</li>
+          <li><strong>Scoped the analysis to the use and end-of-life stages.</strong> Rather than model every life cycle stage, we framed the system boundary from the perspective of a corporate consumer who cares most about their own spending, which begins once bulbs are received. This kept the analysis focused on the stages Bombardier could actually act on.</li>
+          <li><strong>Chose lumens per kWh (kilowatt-hour) as the functional unit.</strong> Comparing bulbs by energy efficiency, rather than raw brightness or wattage, gave a like-for-like basis for comparison that ties directly to both operating cost and environmental impact.</li>
+          <li><strong>Selected GWP (Global Warming Potential) as the environmental impact category.</strong> From the many categories available in the LCA, we prioritized GWP because it is the most widely understood measure of environmental harm, making the finding legible to a non-technical client.</li>
+          <li><strong>Ran sensitivity analyses on the most uncertain inputs.</strong> Because the LCA relied on secondary data, the team stress-tested the three least certain parameters (manufacturing electricity, transportation, and warehouse electricity) at plus or minus 25% and 50% to confirm the conclusion held even if the data were off.</li>
         </ul>
       </div>
 
       <div class="project-section">
+        <h2>My Work: Financial Analysis</h2>
+        <p>I built the cost case comparing the two alternatives over their full life cycles rather than on purchase price alone.</p>
+        <ul class="bullet-list">
+          <li><strong>Set a 15-year timeframe.</strong> LEDs and LFLs last for different periods (7.5 years vs. 3 years under the client's usage), so I set the comparison window to their lowest common multiple. This ensured neither alternative gained an unfair edge from where its replacement cycles happened to land.</li>
+          <li><strong>Applied the equivalent annual worth method.</strong> Since lighting is an ongoing operating tool rather than a one-time purchase with a fixed end date, I expressed each option as an equivalent annual cost. This was more meaningful to a client than a single lump-sum figure and made the yearly savings directly visible.</li>
+          <li><strong>Modelled the full cost picture.</strong> I accounted for capital and installation costs, operational energy draw, periodic replacements from premature failures, and end-of-life replacement, using the client's real facility data (4,367 fixtures, 18 hours/day usage) and Bombardier's own return on invested capital of 2.24% as the minimum acceptable rate of return.</li>
+        </ul>
+        <p><strong>The result:</strong> despite a $100,441 CAD upfront cost for LEDs versus $0 to keep the existing fluorescents, the switch produces <span class="highlight">equivalent annual savings of $35,319.79 CAD per year</span>, driven by lower energy use, fewer premature failures, and a longer replacement cycle.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>My Work: Process-Based Life Cycle Analysis</h2>
+        <p>I quantified the environmental case using OpenLCA software and the TRACI 2.1 impact method.</p>
+        <ul class="bullet-list">
+          <li><strong>Built the life cycle inventory for both alternatives.</strong> I compiled the materials, energy, and transport inputs for each bulb across the use and end-of-life stages, drawing on secondary data where primary data was not feasible to obtain.</li>
+          <li><strong>Focused the impact analysis on GWP.</strong> Measured in kg CO2e, this gave a single, widely understood indicator to compare the two options and isolate their biggest emission contributors.</li>
+        </ul>
+        <p><strong>The result:</strong> fluorescent bulbs carry a <span class="highlight">97.69% greater GWP</span> than LEDs, a gap driven largely by their higher energy demand and the emissions embedded in their materials and disposal.</p>
+      </div>
+
+      <div class="project-section">
         <h2>Outcomes</h2>
-        <p>The project taught me to think about tradeoffs across a product's entire life — not just the use phase, which is where most people's intuition stops. Pairing the environmental LCA with a full financial model (NPV, sensitivity analysis) meant the recommendations were grounded in both sustainability <span class="highlight">and</span> economic reality, which is the lens I now bring to supply chain and procurement decisions.</p>
+        <p>As an academic exercise, the report's recommendation was unambiguous: Bombardier should switch to LEDs, a verdict supported by all four analyses.</p>
+        <p>The two headline numbers both came from my work: <span class="highlight">equivalent annual savings of $35,319.79 CAD per year</span> on the financial side, and a <span class="highlight">97.69% greater GWP</span> for fluorescents on the environmental side. The societal analysis reinforced the case, since fluorescent manufacturing exposes workers and consumers to mercury, phosphor dust, and UV radiation that LEDs avoid, and the uncertainty analysis confirmed the environmental finding held across every sensitivity scenario.</p>
+        <p><strong>Limitations worth noting:</strong> the study relied on secondary data, focused only on GWP rather than the full range of environmental categories, and omitted packaging data. The team flagged these as areas for a more comprehensive follow-up study.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Chart &amp; Graphic Placement</h2>
+
+        <div class="figure-note">
+          <h3>1. Cash flow diagrams (Figures 2.1 and 2.2)</h3>
+          <p><strong>Section:</strong> My Work: Financial Analysis</p>
+          <p><strong>Reinforces:</strong> The visual contrast between the two cost structures, showing the LED's high upfront cost against the LFL's heavier recurring replacement cycle.</p>
+          <p><strong>Caption:</strong> "Side-by-side cash flows over the 15-year comparison window, showing where each alternative incurs its costs."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>2. GWP contribution bar graphs (Figures 3.2 and 3.3)</h3>
+          <p><strong>Section:</strong> My Work: Process-Based LCA</p>
+          <p><strong>Reinforces:</strong> The headline environmental finding, making the roughly 35x gap in emissions immediately visible.</p>
+          <p><strong>Caption:</strong> "Top contributors to Global Warming Potential for each alternative, illustrating the LED's dramatically lower footprint."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>3. Simplified product system diagram (Figure 3.1)</h3>
+          <p><strong>Section:</strong> My Work: Process-Based LCA (or Design Decisions, beside the system boundary point)</p>
+          <p><strong>Reinforces:</strong> The scoping decision to focus on the use and end-of-life stages, with the boundary clearly highlighted.</p>
+          <p><strong>Caption:</strong> "The system boundary applied to both alternatives, focused on the stages most relevant to the client."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>4. Sensitivity analysis chart (Figure 5.2, electricity during manufacturing)</h3>
+          <p><strong>Section:</strong> Outcomes, next to the point about the conclusion holding under uncertainty</p>
+          <p><strong>Reinforces:</strong> The robustness of the finding, showing LEDs stay lower even when inputs are pushed to their extremes.</p>
+          <p><strong>Caption:</strong> "Even under plus or minus 50% swings in manufacturing electricity, LEDs retain their lower environmental impact."</p>
+        </div>
+
+        <div class="figure-note">
+          <h3>5. Societal impact assessment tables (Tables 4.1 and 4.2)</h3>
+          <p><strong>Section:</strong> Outcomes, alongside the societal point</p>
+          <p><strong>Reinforces:</strong> The stakeholder-by-stakeholder comparison, with the fluorescent table's "very negative" worker health rating standing out against the LED equivalent.</p>
+          <p><strong>Caption:</strong> "Societal impact comparison across stakeholder groups, highlighting the health and safety gap between the two options."</p>
+        </div>
       </div>
     </main>
 

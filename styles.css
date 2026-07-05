@@ -532,6 +532,33 @@ body {
   margin: 0 0 8px;
 }
 
+.project-subtitle {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.project-hero .caption {
+  margin: 2px 0 0;
+}
+
+.figure-note {
+  margin-bottom: 20px;
+}
+
+.figure-note h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.figure-note p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 4px;
+}
+
 @media (max-width: 480px) {
   .header {
     gap: 14px;
